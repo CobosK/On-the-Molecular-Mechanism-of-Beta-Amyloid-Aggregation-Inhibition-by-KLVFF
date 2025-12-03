@@ -1,7 +1,7 @@
 Density Map Generation in VMD (Tcl)
 The following Tcl commands were executed directly in the VMD terminal (Tk Console) to compute the average density map of atoms from chain G using the VolMap plugin:
 
-volmap density [atomselect top "chain G"] -res 0.5 -weight mass -allframes -combine avg -mol top
+volmap density [atomselect top "chain G and chain A"] -res 0.5 -weight mass -allframes -combine avg -mol top
 
 Parameter Description:
 volmap density — Method used to generate density maps.
