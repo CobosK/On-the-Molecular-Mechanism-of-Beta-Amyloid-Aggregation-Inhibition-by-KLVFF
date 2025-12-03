@@ -1,0 +1,20 @@
+Density Map Generation in VMD (Tcl)
+The following Tcl commands were executed directly in the VMD terminal (Tk Console) to compute the average density map of atoms from chain G using the VolMap plugin:
+
+volmap density [atomselect top "chain G"] -res 0.5 -weight mass -allframes -combine avg -mol top
+
+Parameter Description:
+volmap density — Method used to generate density maps.
+atomselect top "chain G" — Selects the atoms belonging to chain G in the active molecule.
+-res 0.5 — Grid resolution in Å.
+-weight mass — Weights the density contribution by atomic mass.
+-allframes — Uses all trajectory frames for the calculation.
+-combine avg — Computes the average density over the entire simulation.
+-mol top — Applies the calculation to the currently active molecule in VMD.
+
+
+The generated density_out.dx file was then loaded into VMD exactly with the following commands:
+
+display resetview
+mol addfile {density_out.dx} type {dx} first 0 last -1 step 1 waitfor 1 volsets {0 } 0
+animate style Loop
