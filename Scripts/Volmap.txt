@@ -10,7 +10,7 @@ atomselect top "chain G" — Selects the atoms belonging to chain G in the activ
 -weight mass — Weights the density contribution by atomic mass.
 -allframes — Uses all trajectory frames for the calculation.
 -combine avg — Computes the average density over the entire simulation.
--mol top — Applies the calculation to the currently active molecule in VMD..
+-mol top — Applies the calculation to the currently active molecule in VMD.
 
 
 The generated density_out.dx file was then loaded into VMD exactly with the following commands:
